@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import './App.css';
 import './reset.less'
 
 class App extends Component {
