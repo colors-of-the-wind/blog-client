@@ -1,12 +1,9 @@
+import React from 'react'
 import Loadable from 'react-loadable'
 
 const doc = document
 
-const Loading = () => {
-   return null
-}
-
-export default (url, title, Loadings = Loading) => {
+export default (url, title) => {
 
     if (process.env.NODE_ENV === 'development') {
         return require(`../screen/${url}`).default
@@ -17,6 +14,6 @@ export default (url, title, Loadings = Loading) => {
             if (title) doc.title = title
             return import(`../screen/${url}`)
         },
-        loading: Loadings
+        loading:  () => null
     })
 }

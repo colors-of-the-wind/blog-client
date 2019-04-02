@@ -1,6 +1,7 @@
 import qs from 'qs'
 import React from 'react'
 import axios from 'axios'
+import NProgress from 'nprogress'
 import { message } from 'antd'
 
 // 全局配置文件（由webpack生成）
@@ -56,7 +57,7 @@ const devLogs = (url, params, method, options, poorDate, stagingRes) => {
  * @param  {Boolean} isLoading   是否打开loading
  * @return {Function} 
  */
-const httpFactory = method => (url, params = {}, axiosOptions = {}, isLoading = false) => {
+const httpFactory = method => (url, params = {}, axiosOptions = {}, isLoading = true) => {
 	const options = { ...defaultOptions, ...axiosOptions, method, url }
     
 	if (requestBody.includes(method.toUpperCase())) {
@@ -70,9 +71,7 @@ const httpFactory = method => (url, params = {}, axiosOptions = {}, isLoading = 
 	return new Promise ((resolve, reject) => {
         const startDate = Date.now ()
 
-        if (count <= 0 && isLoading) {
-            // 打开loading
-        }
+        if (count <= 0 && isLoading) NProgress.start();
 
         isLoading && count++;
         
@@ -114,10 +113,10 @@ const httpFactory = method => (url, params = {}, axiosOptions = {}, isLoading = 
             if (count <= 0 && isLoading) {
                 if (poorDate < 400) {
                     setTimeout (() => {
-                        // 关闭loading
+                        NProgress.done();
                     }, 400);
                 } else {
-                    // 关闭loading
+                    NProgress.done();
                 }
             }
         })

@@ -9,7 +9,7 @@ delete require.cache[require.resolve('./paths')];
 
 const NODE_ENV = process.env.NODE_ENV;
 
-fs.writeFileSync(path.resolve(__dirname, '../config.js'), `export default {
+fs.writeFileSync(path.resolve(__dirname, '../src/config.js'), `export default {
   dev: '${NODE_ENV}'
 }`);
 
