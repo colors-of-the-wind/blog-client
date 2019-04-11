@@ -1,0 +1,53 @@
+.nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    .n-body {
+        margin-bottom: 30px;
+        li {
+            a {
+                display: block;
+                display: flex;
+                align-items: center;
+                margin: 14px 0;
+                justify-content: flex-end;
+                text-decoration: none;
+            }
+            span {
+                display: block;
+                font-size: 14px;
+                line-height: 20px;
+                color: #607d8b;
+            }
+            .n-round {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #607d8b;
+                border-radius: 5px;
+                margin-left: 10px;
+                margin-top: 2px;
+                margin-right: -15.1px;
+                background-color: #f3f6f7;
+            }
+        }
+        li:hover {
+            span {
+                color: #1890ff;
+            }
+            .n-round {
+                border-color: #1890ff;
+            }
+        }
+        .active {
+            span {
+                color: #eb2f96;
+            }
+            .n-round {
+                border-color: #eb2f96;
+            }
+        }
+    }
+}

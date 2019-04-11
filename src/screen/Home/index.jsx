@@ -1,19 +1,45 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import request from '../../utils/request'
 
+import ArticleItem from '../../components/ArticleItem/'
+import Tool from '../common/Tool/'
+
+import './index.less'
+
 @request()
-class Home extends Component{
-  render (){
+class Home extends Component {
+  render() {
     return (
-      <div>
-        首页
+      <div className="home">
+        <div className="main-box">
+          <ArticleItem
+            title="文章标题"
+            info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
+            brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+          />
+          <ArticleItem
+            title="文章标题"
+            info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
+            brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+          />
+          <ArticleItem
+            title="文章标题"
+            info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
+            brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+          />
+          <ArticleItem
+            title="文章标题"
+            info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
+            brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+          />
+          <ArticleItem
+            title="文章标题"
+            info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
+            brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+          />
+        </div>
       </div>
     )
-  }
-
-  componentDidMount () {
-    console.log('props', this.props)
-    this.props.get('/www.baidu.com/')
   }
 }
 
