@@ -1,50 +1,27 @@
 import React, {Component} from 'react'
-import {List, Card} from 'antd'
 
 import './index.less'
-import { red } from 'ansi-colors';
 
-const data = [
-  {
-    title: 'Title 1',
-  },
-  {
-    title: 'Title 2',
-  },
-  {
-    title: 'Title 3',
-  },
-  {
-    title: 'Title 4',
-  },
-  {
-    title: 'Title 5',
-  },
-  {
-    title: 'Title 6',
-  },
-]
+const data = [1, 2,4,5,6,7,8,9,0,10, 2,4,5,6,7,8,9,0,10, 2,4,5,6,7,8,9,0,10]
 
 export default class extends Component {
   render() {
     return (
       <div className="label">
-        <List dataSource={data} renderItem={item => this.renderItem(item)} />
+        <ul className="l-box">
+          {
+            data.map((item, index) => <li key={ index }>
+              <div className="l-item-box">
+                <img className="l-item-img" src="https://img.xiaopiu.com/userImages/img1140716995179ad0.png" alt=""/>
+                <div className="l-item-content">
+                  <h6 className="l-item-title">Typescript</h6>
+                  <p className="l-item-number">20000 文章</p>
+                </div>
+              </div>
+            </li>)
+          }
+        </ul>
       </div>
     )
   }
-
-  renderItem(item) {
-    return <List.Item>
-      <div className="l-item-box">
-        <img className="l-item-img" src="https://img.xiaopiu.com/userImages/img1140716995179ad0.png" alt=""/>
-        <div>
-          <h6>Typescript</h6>
-          <p>20000 文章</p>
-        </div>
-      </div>
-    </List.Item>
-  }
-
-
 }

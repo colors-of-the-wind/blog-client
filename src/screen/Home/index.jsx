@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import request from '../../utils/request'
 
 import ArticleItem from '../../components/ArticleItem/'
-import Tool from '../common/Tool/'
 
 import './index.less'
 

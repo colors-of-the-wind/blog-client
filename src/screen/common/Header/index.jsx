@@ -6,8 +6,8 @@ import './index.less'
 
 @request()
 class Header extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       name: '',

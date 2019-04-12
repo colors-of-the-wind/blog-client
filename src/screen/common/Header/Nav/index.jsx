@@ -13,7 +13,7 @@ export default class extends Component {
         {name: 'Tags', to: '/label'},
         {name: 'Team', to: '/team'},
         {name: 'About', to: '/about'},
-        {name: 'Archives', to: '/label'},
+        {name: 'Archives', to: '/archives'},
         {name: 'Categories', to: '/class'},
       ],
     }

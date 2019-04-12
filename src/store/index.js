@@ -2,18 +2,10 @@ import { compose, createStore, applyMiddleware  } from 'redux'
 import { persistStore } from 'redux-persist'
 import { routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
-import createBrowserHistory from 'history/createBrowserHistory'
-import createHashHistory from 'history/createHashHistory'
+import { createBrowserHistory } from 'history'
 import reducers from '../reducers'
-import config from '../config'
 
-let createHistory = createHashHistory;
-
-if (config.env === 'production') {
-  createHistory = createBrowserHistory;
-}
-
-const history = createHistory()
+const history = createBrowserHistory()
 
 const routeMiddleware = routerMiddleware(history);
 
