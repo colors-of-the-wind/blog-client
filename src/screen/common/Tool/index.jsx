@@ -17,7 +17,9 @@ const data = [
   'Man charged over missing wedding girl.',
   'Los Angeles battles huge wildfires.',
   'Los Angeles battles huge wildfires.',
+  'Los Angeles battles huge wildfires.',
 ]
+
 
 const colors = [
   'magenta',
@@ -36,7 +38,21 @@ const colors = [
 export default class extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      articles: [
+        'Racing car sprays burning fuel into crowd.',
+        'Japanese princess to wed commoner.',
+        'Australian walks 100km after outback crash.',
+        'Man charged over missing wedding girl.',
+        'Los Angeles battles huge wildfires.',
+        'Los Angeles battles huge wildfires.',
+        'Los Angeles battles huge wildfires.',
+        'Los Angeles battles huge wildfires.'
+      ],
+      tags: [
+        1,2,3,4,5,6,7,8,9,0,1,2
+      ]
+    }
   }
 
   render() {
@@ -54,7 +70,7 @@ export default class extends Component {
             size="small"
             // loading
             split={false}
-            dataSource={data}
+            dataSource={this.state.articles}
             renderItem={item => (
               <List.Item className="tool-item">{item}</List.Item>
             )}
@@ -65,7 +81,7 @@ export default class extends Component {
             size="small"
             // loading
             split={false}
-            dataSource={data}
+            dataSource={this.state.tags}
             renderItem={item => this.renderItem(item)}
           />
         </ToolTemplate>

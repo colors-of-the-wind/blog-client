@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import Pagination from '../../components/Pagination'
+
 import request from '../../utils/request'
 
 import ArticleItem from '../../components/ArticleItem/'
@@ -37,6 +39,7 @@ class Home extends Component {
             brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
           />
         </div>
+        <Pagination/>
       </div>
     )
   }
