@@ -1,25 +1,22 @@
-import React, {PureComponent} from 'react'
+import React from 'react'
 import {Skeleton} from 'antd'
+import {Link} from 'react-router-dom'
 
 import ArticleLabel from '../ArticleLabel/'
 
 import './index.less'
 
-export default class extends PureComponent {
-  render() {
-    return (
-      <div className="article">
-        <Skeleton active loading={this.props.loading}>
-          <img className="article-brief" src={this.props.brief} alt="brief" />
-          <div className="article-info">
-            <h2 className="article-title">{this.props.title}</h2>
-            <p className="article-context">{this.props.info}</p>
-            <div className="article-label">
-              <ArticleLabel />
-            </div>
-          </div>
-        </Skeleton>
+export default ({data, toPath, loading}) => <div className="article">
+  <Skeleton active loading={loading}>
+    <Link to={toPath(data)} className="article">
+      <img className="article-brief" src={data.figure} alt="brief" />
+      <div className="article-info">
+        <h2 className="article-title">{data.title}</h2>
+        <p className="article-context">{data.abstract}</p>
+        <div className="article-label">
+          <ArticleLabel data={data}/>
+        </div>
       </div>
-    )
-  }
-}
+    </Link>
+  </Skeleton>
+</div>

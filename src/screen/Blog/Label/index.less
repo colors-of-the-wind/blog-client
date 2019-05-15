@@ -1,4 +1,5 @@
 .label {
+    height: 100%;
     .l-box{
         display: flex;
         flex-wrap: wrap;
@@ -7,7 +8,9 @@
         li{
             margin-right: 10px;
             margin-bottom: 10px;
+            cursor: pointer;
         }
+
         .l-item-box{
             width: 189px;
             height: 148px;
@@ -36,6 +39,16 @@
             .l-item-number{
                 font-size: 14px;
                 color: '#505050'
+            }
+        }
+
+        li:hover {
+            .l-item-title{
+                color: #1890ff
+            }
+
+            .l-item-number{
+                color: #1890ff
             }
         }
     }

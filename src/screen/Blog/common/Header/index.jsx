@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import request from '../../../utils/request'
+import request from '../../../../utils/request'
 
 import Nav from './Nav/'
 import './index.less'
@@ -30,8 +30,8 @@ class Header extends Component {
           <p className="info">{this.state.phrase}</p>
         </div>
         <div className="bottom-half">
-          <Nav />
-          <div className="foot">
+          <Nav scrollTop={this.props.scrollTop}/>
+          <div className="foot" onClick={() => this.props.setPosition({top: 0})}>
             <p>Copyright © 2019 风的颜色</p>
             <p>{this.state.copyright}</p>
           </div>

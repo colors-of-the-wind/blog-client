@@ -5,11 +5,14 @@
     overflow: hidden;
     display: flex;
     margin-bottom: 10px;
+    user-select: none;
+
     .article-brief {
         width: 200px;
         height: 150px;
         border: 0;
         outline: none;
+        border-radius: 2px;
     }
     .article-info {
         display: flex;
@@ -24,5 +27,14 @@
     .article-context {
         font-size: 13px;
         color: #48515b;
+    }
+
+    &:hover{
+        .article-title {
+            color: #1890ff
+        }
+        .article-context {
+            color: #1890ff
+        }
     }
 }

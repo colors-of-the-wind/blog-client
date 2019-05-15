@@ -51,6 +51,7 @@
     "qs": "^6.7.0",
     "react": "^16.8.4",
     "react-app-polyfill": "^0.2.2",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dev-utils": "^8.0.0",
     "react-dom": "^16.8.4",
     "react-hot-loader": "^4.8.1",

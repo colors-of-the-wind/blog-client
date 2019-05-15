@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Tabs } from 'antd';
 
-import ArticleItem from '../../components/ArticleItem/'
+import ArticleItem from '../../../components/ArticleItem/'
 
 import './index.less'
 

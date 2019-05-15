@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
-
 import {Input, List, Tag} from 'antd'
 
-import ToolTemplate from '../../../components/ToolTemplate/'
-
-import {rangeRandom} from '../../../utils/random'
+import ToolTemplate from '../../../../components/ToolTemplate'
+import {rangeRandom} from '../../../../utils/random'
+import request from '../../../../utils/request'
 
 import './index.less'
 
@@ -35,7 +34,8 @@ const colors = [
   'purple',
 ]
 
-export default class extends Component {
+@request()
+class Tool extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -49,15 +49,13 @@ export default class extends Component {
         'Los Angeles battles huge wildfires.',
         'Los Angeles battles huge wildfires.'
       ],
-      tags: [
-        1,2,3,4,5,6,7,8,9,0,1,2
-      ]
+      tags: []
     }
   }
 
   render() {
     return (
-      <div className="tool">
+      <div>
         <ToolTemplate title="全站搜索">
           <Search
             placeholder="搜索内容..."
@@ -82,20 +80,32 @@ export default class extends Component {
             // loading
             split={false}
             dataSource={this.state.tags}
-            renderItem={item => this.renderItem(item)}
+            renderItem={(item, index) => this.renderItem(item, index)}
           />
         </ToolTemplate>
       </div>
     )
   }
 
-  renderItem(text) {
+  renderItem(item, index) {
     const currentRange = rangeRandom(0, colors.length - 1)
     const currentColor = colors[currentRange]
     return (
       <Tag color={currentColor} className="tool-tag">
-        text
+        {item.labelName}
       </Tag>
     )
   }
+
+  componentDidMount () {
+    this.getTags()
+  }
+
+  async getTags () {
+    const result = await this.props.get('/api/label/hot')
+
+    this.setState({ tags: result })
+  }
 }
+
+export default Tool

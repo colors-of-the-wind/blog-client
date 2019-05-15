@@ -43,13 +43,11 @@ export default class extends Component {
   }
 
   navigate(item, index) {
-    // console.log('12312312', this.props)
     let menu = this.state.menu.map(current => {
       current.selected = current === item
 
       return current
     })
-
-    this.setState({menu})
+    this.setState({menu}, () => this.props.scrollTop(0))
   }
 }
