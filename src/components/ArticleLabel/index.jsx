@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import {Icon} from 'antd'
 import './index.less'
+import {formatEn} from '../../utils/formatDate'
 
 export default ({data}) => <div className="article-label">
   <img
@@ -43,6 +44,6 @@ export default ({data}) => <div className="article-label">
       theme="twoTone"
       twoToneColor="#7948ea"
     />
-    {data.modifyTime}
+    {formatEn(data.modifyTime)}
   </span>
 </div>

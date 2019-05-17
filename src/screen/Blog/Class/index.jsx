@@ -21,36 +21,81 @@ export default class extends Component{
       <div className="class">
         <Tabs defaultActiveKey="0" tabBarStyle={ {backgroundColor: '#fff', border: 0, padding: '16px', borderRadius: '6px', display: 'flex', justifyContent: 'space-around'} } onChange={this.callback}>
           { this.state.tags.map((tag, index) => <TabPane tab={tag} key={index}>
-            <ArticleItem
-              title="文章标题"
-              info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
-              brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+          <ArticleItem data={{
+                figure: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                title: '假数据',
+                abstract: '假数据假数据假数据假数据',
+                avatar: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                username: 'Aaron',
+                source: 0,
+                views: 100,
+                labelName: 'ts',
+                modifyTime: 1558078010033
+              }}
+              toPath={() => this.toPath()}
             />
-            <ArticleItem
-              title="文章标题"
-              info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
-              brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+            <ArticleItem data={{
+                figure: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                title: '假数据',
+                abstract: '假数据假数据假数据假数据',
+                avatar: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                username: 'Aaron',
+                source: 0,
+                views: 100,
+                labelName: 'ts',
+                modifyTime: 1558078010033
+              }}
+              toPath={() => this.toPath()}
             />
-            <ArticleItem
-              title="文章标题"
-              info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
-              brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+            <ArticleItem data={{
+                figure: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                title: '假数据',
+                abstract: '假数据假数据假数据假数据',
+                avatar: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                username: 'Aaron',
+                source: 0,
+                views: 100,
+                labelName: 'ts',
+                modifyTime: 1558078010033
+              }}
+              toPath={() => this.toPath()}
             />
-            <ArticleItem
-              title="文章标题"
-              info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
-              brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+            <ArticleItem data={{
+                figure: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                title: '假数据',
+                abstract: '假数据假数据假数据假数据',
+                avatar: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                username: 'Aaron',
+                source: 0,
+                views: 100,
+                labelName: 'ts',
+                modifyTime: 1558078010033
+              }}
+              toPath={() => this.toPath()}
             />
-            <ArticleItem
-              title="文章标题"
-              info="文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介。"
-              brief="http://pic1.win4000.com/wallpaper/a/52c62531085dc.jpg"
+            <ArticleItem data={{
+                figure: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                title: '假数据',
+                abstract: '假数据假数据假数据假数据',
+                avatar: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                username: 'Aaron',
+                source: 0,
+                views: 100,
+                labelName: 'ts',
+                modifyTime: 1558078010033
+              }}
+              toPath={() => this.toPath()}
             />
           </TabPane>) }
         </Tabs>
       </div>
     )
   }
+
+  toPath () {
+    return '/blog'
+  }
+  
   callback(key) {
     console.log(key);
   }

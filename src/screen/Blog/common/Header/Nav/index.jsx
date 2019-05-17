@@ -9,12 +9,12 @@ export default class extends Component {
 
     this.state = {
       menu: [
-        {name: 'Home', selected: true, to: '/'},
-        {name: 'Tags', to: '/label'},
-        {name: 'Team', to: '/team'},
-        {name: 'About', to: '/about'},
-        {name: 'Archives', to: '/archives'},
-        {name: 'Categories', to: '/class'},
+        {name: 'Home', selected: true, to: '/blog/'},
+        {name: 'Tags', to: '/blog/label'},
+        {name: 'Team', to: '/blog/team'},
+        {name: 'About', to: '/blog/about'},
+        {name: 'Archives', to: '/blog/archives'},
+        {name: 'Categories', to: '/blog/class'},
       ],
     }
   }

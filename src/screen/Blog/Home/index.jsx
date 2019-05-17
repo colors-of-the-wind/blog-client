@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import Pagination from '../../../components/Pagination'
-
 import request from '../../../utils/request'
-
 import ArticleItem from '../../../components/ArticleItem/'
 
 import './index.less'
@@ -34,7 +32,7 @@ class Home extends Component {
   }
 
   toPath () {
-    return '/'
+    return '/blog'
   }
 
   componentDidMount() {

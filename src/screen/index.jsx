@@ -19,8 +19,10 @@ export default class extends Component {
     return (
       <BrowserRouter>
         {/* <ConnectedRouter history={ history }> */}
-          <Route path="/" component={Blog} />
           <Route path="/admin" component={Admin} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/403" component={NoPermission} />
+          <Route path="/404" component={NotFound} />
         {/* </ConnectedRouter> */}
       </BrowserRouter>
     )

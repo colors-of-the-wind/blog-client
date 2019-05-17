@@ -15,8 +15,6 @@ const Detail = LoadBlog('Detail/')
 const Label = LoadBlog('Label/')
 const Team = LoadBlog('Team/')
 const Archives = LoadBlog('Archives/')
-const NoPermission = Loadable('403')
-const NotFound = Loadable('404')
 
 export default class extends Component {
   render() {
@@ -31,15 +29,13 @@ export default class extends Component {
                 autoHide
             >
                 <div style={ {paddingRight: '15px'} }>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} />
-                    <Route path="/class" component={Class} />
-                    <Route path="/detail" component={Detail} />
-                    <Route path="/label" component={Label} />
-                    <Route path="/team" component={Team} />
-                    <Route path="/archives" component={Archives} />
-                    <Route path="/403" component={NoPermission} />
-                    <Route path="/404" component={NotFound} />
+                    <Route exact path="/blog" component={Home} />
+                    <Route path="/blog/about" component={About} />
+                    <Route path="/blog/class" component={Class} />
+                    <Route path="/blog/detail" component={Detail} />
+                    <Route path="/blog/label" component={Label} />
+                    <Route path="/blog/team" component={Team} />
+                    <Route path="/blog/archives" component={Archives} />
                 </div>
             </Scrollbars>
             </div>
