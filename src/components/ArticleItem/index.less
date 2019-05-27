@@ -6,15 +6,16 @@
     display: flex;
     margin-bottom: 10px;
     user-select: none;
-
     .article-brief {
         width: 200px;
         height: 150px;
         border: 0;
         outline: none;
         border-radius: 2px;
+        display: block;
     }
     .article-info {
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -27,9 +28,15 @@
     .article-context {
         font-size: 13px;
         color: #48515b;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        /*! autoprefixer: off */
+        -webkit-box-orient: vertical;
     }
-
-    &:hover{
+    &:hover {
         .article-title {
             color: #1890ff
         }

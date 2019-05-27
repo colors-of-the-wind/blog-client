@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
-import classnames from 'classnames'
-import './index.less'
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import classnames from 'classnames';
+import './index.less';
 
 export default class extends Component {
-  constructor() {
-    super()
+  constructor () {
+    super ();
 
     this.state = {
       menu: [
@@ -16,38 +16,38 @@ export default class extends Component {
         {name: 'Archives', to: '/blog/archives'},
         {name: 'Categories', to: '/blog/class'},
       ],
-    }
+    };
   }
 
-  render() {
+  render () {
     return (
       <nav className="nav">
-        <ul className="n-body">{this.renderMenu()}</ul>
+        <ul className="n-body">{this.renderMenu ()}</ul>
       </nav>
-    )
+    );
   }
 
-  renderMenu() {
-    return this.state.menu.map((item, index) => (
+  renderMenu () {
+    return this.state.menu.map ((item, index) => (
       <li
-        className={classnames({active: item.selected})}
+        className={classnames ({active: item.selected})}
         key={index}
-        onClick={() => this.navigate(item, index)}
+        onClick={() => this.navigate (item, index)}
       >
         <Link to={item.to}>
           <span>{item.name}</span>
           <em className="n-round" />
         </Link>
       </li>
-    ))
+    ));
   }
 
-  navigate(item, index) {
-    let menu = this.state.menu.map(current => {
-      current.selected = current === item
+  navigate (item, index) {
+    let menu = this.state.menu.map (current => {
+      current.selected = current === item;
 
-      return current
-    })
-    this.setState({menu}, () => this.props.scrollTop(0))
+      return current;
+    });
+    this.setState ({menu}, () => this.props.scrollTop (0));
   }
 }

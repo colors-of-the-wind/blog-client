@@ -1,23 +1,23 @@
-import React, { Component } from 'react'
-import { Layout, Menu, Icon, Avatar, Popconfirm, Breadcrumb } from 'antd';
+import React, {Component} from 'react';
+import {Layout, Menu, Icon, Avatar, Popconfirm, Breadcrumb} from 'antd';
 
-import './index.less'
+import './index.less';
 
-const { Header, Sider, Content } = Layout;
-const { SubMenu, Item } = Menu
+const {Header, Sider, Content} = Layout;
+const {SubMenu, Item} = Menu;
 
 export default class extends Component {
   state = {
-    collapsed: false
-  }
+    collapsed: false,
+  };
 
   toggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    })
-  }
+    this.setState ({
+      collapsed: !this.state.collapsed,
+    });
+  };
 
-  render() {
+  render () {
     return (
       <Layout className="layout">
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
@@ -72,7 +72,7 @@ export default class extends Component {
           </Menu>
         </Sider>
         <Layout>
-          <Header className="header" style={{ background: '#fff', padding: 0 }}>
+          <Header className="header" style={{background: '#fff', padding: 0}}>
             <Icon
               className="trigger"
               type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
@@ -86,7 +86,10 @@ export default class extends Component {
               cancelText="取消"
             >
               <div className="avatar">
-                <Avatar size="small" src="https://raw.githubusercontent.com/AaronBank/static-files/master/images/tool-logo.jpg"/>
+                <Avatar
+                  size="small"
+                  src="https://raw.githubusercontent.com/AaronBank/static-files/master/images/tool-logo.jpg"
+                />
                 <span className="userName">Array</span>
               </div>
             </Popconfirm>
@@ -110,6 +113,6 @@ export default class extends Component {
           </Layout>
         </Layout>
       </Layout>
-    )
+    );
   }
 }

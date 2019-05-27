@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react';
 
-export default class extends Component{
-  render (){
+export default class extends Component {
+  render () {
     return (
       <div>
         403
       </div>
-    )
+    );
   }
 }

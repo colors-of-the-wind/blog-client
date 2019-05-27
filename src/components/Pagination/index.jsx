@@ -1,12 +1,10 @@
-import React, {Component} from 'react'
-import { Pagination } from 'antd'
+import React from 'react';
+import {Pagination} from 'antd';
 
-import './index.less'
+import './index.less';
 
-export default class extends Component {
-    render () {
-        return <div className="pagination">
-            <Pagination total={50} showSizeChanger showQuickJumper />
-        </div>
-    }
-}
+export default props => (
+  <div className="pagination">
+    <Pagination {...props} />
+  </div>
+);
